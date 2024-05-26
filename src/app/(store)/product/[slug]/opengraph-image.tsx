@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from 'next/og'
 import { Product } from '@/data/types/product'
 import { api } from '@/data/api'
