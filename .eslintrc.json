@@ -2,6 +2,6 @@
   "extends": ["next/core-web-vitals", "@rocketseat/eslint-config/next"],
   "rules": {
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
-    "@typescript-eslint/prefer-readonly": "off",
+    "@typescript-eslint/prefer-readonly": "off"
   }
 }

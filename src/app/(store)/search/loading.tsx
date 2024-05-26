@@ -1,10 +1,14 @@
 'use client'
 
-import { Skeleton } from '@/components/skeleton'
-import { useSearchParams } from 'next/navigation'
+import { ReadonlyURLSearchParams, useSearchParams } from 'next/navigation'
 
+import { Skeleton } from '@/components/skeleton'
+
+interface Params extends ReadonlyURLSearchParams {
+  q: string
+}
 export default function SearchLoading() {
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams() as Params
   const { q: query } = searchParams
   return (
     <div className="flex flex-col gap-4">
