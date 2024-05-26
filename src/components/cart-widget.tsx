@@ -3,8 +3,7 @@
 import { ShoppingBag } from 'lucide-react'
 import { useCart } from '@/contexts/cart-context'
 
-interface CartWidgetProps {}
-export function CartWidget(props: CartWidgetProps) {
+export function CartWidget() {
   const { items } = useCart()
   return (
     <div className="flex items-center gap-2">
