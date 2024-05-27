@@ -34,7 +34,10 @@ export default async function OgImage({
 }) {
   const product = await getProduct(params.slug)
 
-  const productImageURL = new URL(product.image, env.APP_URL).toString()
+  const productImageURL = new URL(
+    product.image,
+    process.env.NODE_ENV === 'production' ? '' : env.APP_URL,
+  ).toString()
   return new ImageResponse(
     (
       <div
