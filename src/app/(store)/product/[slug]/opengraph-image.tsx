@@ -36,7 +36,9 @@ export default async function OgImage({
 
   const productImageURL = new URL(
     product.image,
-    process.env.NODE_ENV === 'production' ? '' : env.APP_URL,
+    process.env.NODE_ENV === 'production'
+      ? process.env.VERCEL_URL
+      : env.APP_URL,
   ).toString()
   return new ImageResponse(
     (
